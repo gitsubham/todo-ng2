@@ -1,0 +1,15 @@
+.inline {
+ display: flex;
+ align-items: center;
+}
+
+.pad-10 {
+	padding: 10px
+}
+
+.todo-input {
+	width: 200px;
+	border: 1px solid;
+	margin: 0 10px;
+	padding: 10px;
+}

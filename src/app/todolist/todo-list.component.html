@@ -1,0 +1,18 @@
+﻿<div class="container">
+<div *ngIf="_showToDoList">
+	<h3> {{currentUser.firstName}}'s Todo List</h3>
+		<div *ngFor="let task of _tasksInTodoList; let index = index" class="inline">
+				<input type="checkbox" (change)="appendToSelectedTaskList(index)"/> 
+				<div class="todo-input" contentEditable=true (blur)="saveItem($event.target.innerText, index)"> {{ task.caption }} </div>
+				<button  class="pad-10 btn btn-primary" (click)="addItemInToDoList(index)"> Add </button>
+				<button  class="pad-10 btn" (click)="deleteSingleItemFromToDoList(index)"> Delete </button>
+		</div>	
+	<button  class="pad-10 btn" *ngIf="shouldShowMultiDelete()" (click)="deleteMultiItemsFromToDoList()"> Multi-Delete  </button>
+	<div>
+	</div>
+</div>
+
+<div *ngIf="!_showToDoList">
+	<button class= "btn btn-primary" (click)="createToDoList()"> Create a to do list </button>
+</div>
+</div>

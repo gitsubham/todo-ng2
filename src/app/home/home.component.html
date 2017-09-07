@@ -1,0 +1,9 @@
+﻿<div>
+    <div class="home-header">
+        <div class="p-10"> Hi {{currentUser.firstName}} </div>
+        <div class="p-10"> <a [routerLink]="['/login']">Logout</a></div>
+    </div>  
+    <div>  
+        <to-do-list [currentUser]="currentUser"></to-do-list>
+    </div>
+</div>

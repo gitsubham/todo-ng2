@@ -1,0 +1,12 @@
+.home-header {
+	float: right;
+    display: flex;
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.m-50 {
+    margin-top: 50px;
+}
